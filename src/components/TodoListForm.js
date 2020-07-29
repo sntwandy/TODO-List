@@ -1,20 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { createTask } from '../actions'
 
 // Styles
 import '../assets/styles/components/TodoListForm.scss';
 
-const TodoListForm = () => {
+const TodoListForm = props => {
+
+  const [task, setTask] = useState({});
+
+  const handleCreateTask = () => {
+    props.createTask({
+      "title": task.title,
+      "description": task.description,
+    });
+  };
+
+  const handleInputTitle = (e) => {
+    setTask({
+        ...task,
+        title: e.target.value,
+      });
+  };
+
+  const handleInputDescription = (e) => {
+    setTask({
+      ...task,
+      description: e.target.value,
+    })
+  };
+
   return(
     <div className='todo-form'>
         <label htmlFor="title">Title</label>
-        <input name="title" type="text"/>
+        <input onChange={handleInputTitle} name="title" type="text"/>
 
         <label htmlFor="description">Description</label>
-        <textarea name="description" cols="30" rows="5"></textarea>
+        <textarea onChange={handleInputDescription} name="description" cols="30" rows="5"></textarea>
 
-        <button className="form-btn">Add</button>
+        <button className="form-btn" onClick={() => handleCreateTask()}>Add</button>
     </div>
   );
 };
 
-export default TodoListForm;
+const mapDispatchToProps = {
+  createTask,
+};
+
+export default connect(null, mapDispatchToProps)(TodoListForm);
