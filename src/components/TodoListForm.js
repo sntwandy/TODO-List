@@ -11,6 +11,7 @@ const TodoListForm = props => {
 
   const handleCreateTask = () => {
     props.createTask({
+      "id": props.tasks.length + 1,
       "title": task.title,
       "description": task.description,
     });
@@ -47,4 +48,10 @@ const mapDispatchToProps = {
   createTask,
 };
 
-export default connect(null, mapDispatchToProps)(TodoListForm);
+const mapStateToProps = state => {
+  return {
+    tasks: state.tasks,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoListForm);

@@ -11,7 +11,7 @@ const CardContainer = ({ tasks }) => {
         tasks.length > 0 &&
           <div>
             {
-              tasks.map(item => <Card key={item.key} title={item.title} description={item.description} />)
+              tasks.map(item => <Card key={item.id} title={item.title} description={item.description} />)
             }
           </div>
       }
