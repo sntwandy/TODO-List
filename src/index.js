@@ -16,7 +16,7 @@ import reducers from './reducers';
 const initialState = {
   "tasks": [
     {
-    "id": 1,
+    "id": 0,
     "title": "Make the dinner",
     "description": "At seven 'o clock I need to finished!'"
     }
