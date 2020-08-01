@@ -15,9 +15,16 @@ const TodoListForm = props => {
     if ($input[0].value == "" || $input[1].value == "") {
       return alert('You need to fill the inputs');
     };
-
+    let counter = 0;
+    let id = 0;
+    props.tasks.map( item => {
+      counter++;
+      if (counter >= props.tasks.length) {
+        return id = item.id + 1;
+      };
+    });
     props.createTask({
-      "id": props.tasks.length + 1,
+      "id": id,
       "title": task.title,
       "description": task.description,
     });
