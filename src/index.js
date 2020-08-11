@@ -13,15 +13,7 @@ import './assets/styles/Config.scss';
 import reducers from './reducers';
 
 // Initial global state
-const initialState = {
-  "tasks": [
-    {
-    "id": 0,
-    "title": "Make the dinner",
-    "description": "At seven 'o clock I need to finished!'"
-    }
-  ]
-};
+import initialState from './initialState';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, initialState, composeEnhancers());

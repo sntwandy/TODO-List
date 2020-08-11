@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { deleteTask } from '../actions';
 
+// Styles
+import '../assets/styles/components/Card.scss';
+
 const Card = ({ id, title, description, deleteTask }) => {
 
   const handleClick = (id) => {
@@ -9,8 +12,7 @@ const Card = ({ id, title, description, deleteTask }) => {
   };
 
   return(
-    <div>
-      <span>ID: {id}</span>
+    <div className="card">
       <h3>{title}</h3>
       <p>{description}</p>
       <button onClick={ () => handleClick(id)}>Delete</button>

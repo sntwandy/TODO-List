@@ -27,6 +27,7 @@ const TodoListForm = props => {
       "id": id,
       "title": task.title,
       "description": task.description,
+      "completed": false,
     });
     $input[0].value = "";
     $input[1].value = "";
@@ -49,10 +50,10 @@ const TodoListForm = props => {
   return(
     <div className='todo-form'>
         <label htmlFor="title">Title</label>
-        <input className="input" onChange={handleInputTitle} name="title" type="text"/>
+        <input id="input-title" className="input" onChange={handleInputTitle} name="title" type="text"/>
 
         <label htmlFor="description">Description</label>
-        <textarea className="input" onChange={handleInputDescription} name="description" cols="30" rows="5"></textarea>
+        <textarea id="input-textarea" className="input" onChange={handleInputDescription} name="description" cols="30" rows="3"></textarea>
 
         <button className="form-btn" onClick={() => handleCreateTask()}>Add</button>
     </div>

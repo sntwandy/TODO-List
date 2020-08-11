@@ -3,4 +3,39 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
+}
+
+.todo-form label {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.todo-form button {
+  margin: 10px 0px;
+  background-color: #d9dcd6;
+  color: black;
+  border-style: none;
+  width: 100px;
+  height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+#input-title {
+  border-style: none;
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+#input-textarea {
+  border-style: none;
+  width: 250px;
+  height: 50px;
+  border-radius: 3px;
+  font-size: 18px;
 }

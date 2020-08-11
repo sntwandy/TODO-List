@@ -1,0 +1,28 @@
+.card {
+    max-width: 300px;
+    min-width: 100px;
+    width: 300px;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+    margin: 30px 10px;
+    border-radius: 3px;
+    background: #2f6690;
+    box-shadow:  30px 30px 60px #234d6c , -30px -30px 60px #3b80b4;
+}
+
+.card-container h3 {
+    margin: 0px;
+}
+
+.card-container button {
+    background-color: #d9dcd6;
+    color: black;
+    border-style: none;
+    width: 100px;
+    height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
